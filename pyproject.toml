@@ -1,0 +1,51 @@
+[project]
+name = "prueba-tecnica-sc"
+version = "0.1.0"
+description = "Este proyecto corresponde al desarrollo de una prueba técnica de Ciencia de Datos para una entidad financiera. El objetivo es desarrollar una solución integral que permita detectar transacciones atípicas (potencialmente fraudulentas) dentro de un conjunto masivo de datos de créditos otorgados por clientes reales."
+authors = [
+    "Luis Felipe Ospina Giraldo <lfog1012@gmail.com>",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+dependencies = [
+
+]
+
+[project.urls]
+documentation = "https://1210lfo.github.io/prueba-tecnica-sc"
+repository = "https://github.com/1210lfo/prueba-tecnica-sc"
+
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0", # Code linting and formatting
+    "pytest>=8.3.5", # Testing framework
+    "pytest-cookies>=0.7.0",
+    "pytest-cov>=6.1.1",
+    "cruft[pyproject]>=2.15.0",# Automated Cookiecutter template synchronization
+]
+
+#
+
+[tool.uv]
+package = false
+default-groups = [
+    "dev",
+#
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.coverage.paths]
+source = ["src/"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["**/__init__.py"]
