@@ -17,13 +17,11 @@ Examples:
 
 ```bash
 ├── notebooks
-│   ├── 1-data                   # data extraction and cleaning
-│   ├── 2-exploration            # exploratory data analysis (EDA)
-│   ├── 3-analysis               # Statistical analysis, hypothesis testing.
-│   ├── 4-feat_eng               # feature engineering (creation, selection, and transformation.)
-│   ├── 5-models                 # model training, evaluation, and hyperparameter tuning.
-│   ├── 6-interpretation         # model interpretation
-│   ├── 7-deploy                 # model packaging, deployment strategies.
-│   ├── 8-reports                # story telling, summaries and analysis conclusions.
-│   ├── notebook_template.ipynb
+│   ├── 1-EDA                   # Exploratory Data Analysis: visualizations, data distribution, patterns.
+│   ├── 2-FeatureEngineering    # Feature creation, transformation, selection.
+│   ├── 3-ModelSelection        # Model training, evaluation, and hyperparameter tuning.
+│   ├── 4-Interpretation        # Model explainability using SHAP, LIME, etc.
+│   ├── 5-deploy                # Model packaging and deployment preparation.
+│   ├── notebook_template.ipynb  # Standard notebook template for consistent workflow
+├── README.md
 ```
