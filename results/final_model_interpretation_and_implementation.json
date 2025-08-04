@@ -1,0 +1,134 @@
+{
+  "model_performance": {
+    "accuracy": {
+      "logistic_regression": 0.966372383692094,
+      "random_forest": 0.9973216942763615,
+      "catboost": 0.9965281222100982
+    },
+    "precision": {
+      "logistic_regression": 0.18536585365853658,
+      "random_forest": 1.0,
+      "catboost": 0.7346938775510204
+    },
+    "recall": {
+      "logistic_regression": 0.9382716049382716,
+      "random_forest": 0.6666666666666666,
+      "catboost": 0.8888888888888888
+    },
+    "f1": {
+      "logistic_regression": 0.3095723014256619,
+      "random_forest": 0.8,
+      "catboost": 0.8044692737430168
+    },
+    "roc_auc": {
+      "logistic_regression": 0.9524358024691357,
+      "random_forest": 0.8333333333333333,
+      "catboost": 0.9431444444444445
+    }
+  },
+  "feature_importance_analysis": [
+    {
+      "feature": "CantidadCreditosUltimaSemana",
+      "importance": 14.092021920139194,
+      "importance_pct": 14.092021920139183
+    },
+    {
+      "feature": "CupoTotal_discretized",
+      "importance": 13.61325583076272,
+      "importance_pct": 13.613255830762707
+    },
+    {
+      "feature": "dia_credito",
+      "importance": 10.840856362220313,
+      "importance_pct": 10.840856362220304
+    },
+    {
+      "feature": "DepartamentoCredito",
+      "importance": 9.825398073883138,
+      "importance_pct": 9.825398073883129
+    },
+    {
+      "feature": "hora_credito",
+      "importance": 8.03729307532791,
+      "importance_pct": 8.037293075327902
+    },
+    {
+      "feature": "DepartamentoResidencia",
+      "importance": 6.960275822882392,
+      "importance_pct": 6.960275822882386
+    },
+    {
+      "feature": "dia_semana",
+      "importance": 6.520260116961539,
+      "importance_pct": 6.520260116961533
+    },
+    {
+      "feature": "cupo_alto_utilizado",
+      "importance": 5.947194206569644,
+      "importance_pct": 5.947194206569638
+    },
+    {
+      "feature": "mes_credito",
+      "importance": 4.894325220647882,
+      "importance_pct": 4.894325220647877
+    },
+    {
+      "feature": "DepartamentoMayorFrecuenciaCompra",
+      "importance": 4.6586901991037415,
+      "importance_pct": 4.658690199103738
+    }
+  ],
+  "business_rules": [
+    {
+      "feature": "CantidadCreditosUltimaSemana",
+      "rule": "REGLA DE UMBRAL: CantidadCreditosUltimaSemana < 2.00 indica MAYOR riesgo de operación atípica",
+      "priority": "⚠️ ALTA",
+      "importance_pct": 14.092021920139183
+    },
+    {
+      "feature": "CupoTotal_discretized",
+      "rule": "REGLA DE ALTO RIESGO: CupoTotal_discretized = 'Muy_Bajo' está presente en 95.5% de operaciones atípicas",
+      "priority": "⚠️ ALTA",
+      "importance_pct": 13.613255830762707
+    },
+    {
+      "feature": "dia_credito",
+      "rule": "REGLA DE UMBRAL: dia_credito < 8.00 indica MAYOR riesgo de operación atípica",
+      "priority": "⚠️ ALTA",
+      "importance_pct": 10.840856362220304
+    },
+    {
+      "feature": "DepartamentoCredito",
+      "rule": "REGLA DE UMBRAL: DepartamentoCredito > 19.00 indica MAYOR riesgo de operación atípica",
+      "priority": "📊 MEDIA",
+      "importance_pct": 9.825398073883129
+    },
+    {
+      "feature": "hora_credito",
+      "rule": "REGLA DE UMBRAL: hora_credito < 12.00 indica MAYOR riesgo de operación atípica",
+      "priority": "📊 MEDIA",
+      "importance_pct": 8.037293075327902
+    }
+  ],
+  "risk_thresholds": {
+    "high_risk": 0.7,
+    "medium_risk": 0.3
+  },
+  "probability_statistics": {
+    "mean": 0.1989303973825889,
+    "std": 0.3951372657011847,
+    "min": 5.268243869813804e-08,
+    "max": 0.9999993565194722,
+    "q25": 2.1545308897566754e-05,
+    "q50": 0.00012913061318394983,
+    "q75": 0.0034045389645994076
+  },
+  "implementation_plan": {
+    "high_risk_threshold": 0.7,
+    "medium_risk_threshold": 0.3,
+    "estimated_monthly_savings": 88888888.88888888,
+    "implementation_phases": 3,
+    "critical_features": 3
+  },
+  "generated_timestamp": "2025-08-04T00:29:11.594202"
+}
