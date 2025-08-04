@@ -1,0 +1,95 @@
+{
+  "best_model": "catboost",
+  "cv_results": {
+    "accuracy": {
+      "logistic_regression": 0.9673379639880337,
+      "random_forest": 0.9973959409657643,
+      "catboost": 0.9961311584201773
+    },
+    "precision": {
+      "logistic_regression": 0.19342126144753752,
+      "random_forest": 0.9873076923076922,
+      "catboost": 0.699701583222937
+    },
+    "recall": {
+      "logistic_regression": 0.9721153846153847,
+      "random_forest": 0.6828365384615385,
+      "catboost": 0.9223076923076924
+    },
+    "f1": {
+      "logistic_regression": 0.3225724030193124,
+      "random_forest": 0.8057354535391917,
+      "catboost": 0.7937139139999999
+    },
+    "roc_auc": {
+      "logistic_regression": 0.9867401983173076,
+      "random_forest": 0.9847276742788461,
+      "catboost": 0.9854921213942308
+    }
+  },
+  "cv_stds": {
+    "accuracy": {
+      "logistic_regression": 0.0016824518302692981,
+      "random_forest": 0.00040764583255909723,
+      "catboost": 0.0008088625714067143
+    },
+    "precision": {
+      "logistic_regression": 0.00804058985927681,
+      "random_forest": 0.016117174492120735,
+      "catboost": 0.056074502491845576
+    },
+    "recall": {
+      "logistic_regression": 0.011436852287088699,
+      "random_forest": 0.05723952935178802,
+      "catboost": 0.024335852724132166
+    },
+    "f1": {
+      "logistic_regression": 0.011326959651750651,
+      "random_forest": 0.03807324658202198,
+      "catboost": 0.030698697909267932
+    },
+    "roc_auc": {
+      "logistic_regression": 0.0071424654949597795,
+      "random_forest": 0.008049732686067405,
+      "catboost": 0.01101100667280031
+    }
+  },
+  "test_metrics": {
+    "accuracy": {
+      "logistic_regression": 0.966372383692094,
+      "random_forest": 0.9973216942763615,
+      "catboost": 0.9965281222100982
+    },
+    "precision": {
+      "logistic_regression": 0.18536585365853658,
+      "random_forest": 1.0,
+      "catboost": 0.7346938775510204
+    },
+    "recall": {
+      "logistic_regression": 0.9382716049382716,
+      "random_forest": 0.6666666666666666,
+      "catboost": 0.8888888888888888
+    },
+    "f1": {
+      "logistic_regression": 0.3095723014256619,
+      "random_forest": 0.8,
+      "catboost": 0.8044692737430168
+    },
+    "roc_auc": {
+      "logistic_regression": 0.9524358024691357,
+      "random_forest": 0.8333333333333333,
+      "catboost": 0.9431444444444445
+    }
+  },
+  "model_configs": {
+    "logistic_regression": "LogisticRegression(class_weight='balanced', max_iter=1000, random_state=42)",
+    "random_forest": "RandomForestClassifier(class_weight='balanced', n_jobs=-1, random_state=42)",
+    "catboost": "<catboost.core.CatBoostClassifier object at 0x765d2c918390>"
+  },
+  "training_info": {
+    "cv_folds": 5,
+    "random_state": 42,
+    "test_size": 0.2,
+    "stratified": true
+  }
+}
